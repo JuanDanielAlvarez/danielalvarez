@@ -95,6 +95,8 @@ body{width: 50%;}
 	top: 100px;
 	animation: slide 0.5s forwards;
     animation-delay: 1.1s;
+	-webkit-animation:slide 0.5s forwards;
+	-webkit-animation-delay:1.1s;
 }
 
 .cta-secondary-button{
@@ -111,6 +113,8 @@ body{width: 50%;}
 	top: 100px;
 	animation: slide 0.5s forwards;
     animation-delay: 1.1s;
+	-webkit-animation:slide 0.5s forwards;
+	-webkit-animation-delay:1.1s;
 }
 
 #index-subtitle{
@@ -119,14 +123,12 @@ body{width: 50%;}
 	top: 100px;
 	animation: slide 0.5s forwards;
     animation-delay: 1s;
+	-webkit-animation:slide 0.5s forwards;
+	-webkit-animation-delay:1s;
 }
 
-@-webkit-keyframes scale-1 {
-    100% { transform: scale(1); opacity: 1;}
-}
-
-@keyframes scale-1 {
-    100% { transform: scale(1);opacity: 1;}
+@-webkit-keyframes slide {
+    100% { top: 0px; opacity: 1;}
 }
 
 @keyframes slide{
