@@ -4,10 +4,11 @@
 		<meta charset="utf-8">
 		<title>Daniel Alvarez | My Personal Portfolio</title>
 		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/chat-styles.css">
 	</head>
 	<body>
 		<include src="./common/header.html"></include>
-		<div class="content">
+		<div id="content" class="content">
 			<h1 id="index-title" class="animation-typewritter"> Hi, I am Daniel, <br>full stack web developer</h1>
 			<h2 id="index-subtitle">How can I help you?</h2>
 			<div id="btn-box-call-to-action">
@@ -17,10 +18,13 @@
 		</div>
 		<p class="random-text random-text-right"></p>
 		<p class="random-text random-text-left"></p>
+		<div id ="chat-with-me-container" class="display-none">
+			<include src="chat.html"></include>
+		</div>
 	</body>
 </html>
 
-
+<script src="js/chat.js"></script>
 <script src="js/include_html_in_html.js"></script>
 <script src="js/random_text_generator.js"></script>
 <script src="js/typewritter.js"></script>

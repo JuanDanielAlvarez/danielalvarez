@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import "styles.css";
+
+
+#chat-container, #chat-options{
+  width:60%;
+  display:flex;
+  flex-direction: column;
+}
+
+#chat-options{
+    margin-bottom: 10vh;
+}
+
+.chat-questions{
+  align-self: flex-end;
+  background-color: var(--color-electric-blue);
+  border-radius: 1px;
+  color: var(--color-white);
+  max-width: 60%;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  text-decoration: none;
+}
+.chat-questions p{
+  font: 24px Roboto;
+  padding: 0;
+  margin: 0;
+}
+.chat-questions::before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -19px;
+    top: 8px;
+    bottom: auto;
+    border: 10px solid;
+    border-color: var(--color-electric-blue) transparent transparent var(--color-electric-blue);
+    padding: 0;
+    margin: 0;
+}
+
+.chat-questions:hover{
+  transform: scale(1.3);
+}
+
+.chat-right{
+  background: var(--color-grayish-blue);
+  color: var(--color-white);
+  border-radius: 3px;
+  max-width: 60%;
+  padding: 10px;
+  margin: 10px;
+  align-self: flex-end;
+  position: relative;
+  text-decoration: none;
+}
+.chat-right p{
+  font: 24px Roboto;
+  padding: 0;
+  margin: 0;
+}
+.chat-right::before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -20px;
+    top: 8px;
+    bottom: auto;
+    border: 10px solid;
+    border-color: var(--color-grayish-blue) transparent transparent var(--color-grayish-blue);
+    padding: 0;
+    margin: 0;
+}
+
+.chat-left{
+  background: var(--color-white);
+  color: var(--color-dark-blue);
+  border-radius: 3px;
+  max-width: 60%;
+  padding: 10px;
+  margin: 10px;
+  align-self: flex-start;
+  position: relative;
+  text-decoration: none;
+}
+.chat-left p{
+  font: 24px Roboto;
+  padding: 0;
+  margin: 0;
+}
+.chat-left::before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    left: -20px;
+    top: 8px;
+    bottom: auto;
+    border: 10px solid;
+    border-color: var(--color-white) var(--color-white) transparent transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.face-chat{
+    width: 65px;
+    height: auto;
+    position: absolute;
+    left: -100px;
+    top: -20px;
+}
+
+.animate-talk{
+    animation: talk 0.3s infinite ease-in-out;
+}
+
+@keyframes talk {
+    0% {transform: translate(0,0);}
+    49% {transform: translate(0,0);}
+    50% {transform: translate(0,-5px);}
+    100% { transform: translate(0,-5px);}
+}
