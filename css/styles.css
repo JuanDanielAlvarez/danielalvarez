@@ -28,6 +28,7 @@
   --color-white: #ffffff;
   --color-electric-blue: #2266AA;
   --color-electric-purple: #921EC9;
+  --color-grayish-blue: #625AA9;
   --color-gray: #5D587C;
   --color-purple-shadow: #57476E;
   --color-blue-shadow: #3F406E;
@@ -44,7 +45,7 @@ html{
 	justify-content: center;
 	align-items: center;
 	background-color: var(--color-dark-blue);
-	color: white;
+	color: var(--color-white);
 	min-height: 100%;
 	overflow: hidden;
   	position: relative;
@@ -56,9 +57,18 @@ h2{font-size: 32px;}
 
 button{border: none;}
 
-body{width: 50%;}
-.content{width: 100%; min-height: 400px;}
+body{
+	margin: 0;
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-self: flex-end;
+}
 
+.cursor-none{cursor:none}
 #header{
 	position: absolute;
 	top: 0px;
@@ -103,37 +113,26 @@ body{width: 50%;}
 
 .cta-main-button:not(.no-hover):hover, .cta-secondary-button:not(.no-hover):hover{
 	animation: grows 0.0s forwards; 
-	-webkit-animation:grows 0.0s forwards;
 }
 .animate-slide-up{
 	position: relative;
 	top: 100vh;
 	animation: slide 1s forwards;
-	-webkit-animation:slide 1s forwards;
+	animation-delay: 1.2s;
 }
 
 
 .animate-fly-right{
 	animation: fly-right 0.5s forwards; 
-	-webkit-animation:fly-right 0.5s forwards;
 }
 .animate-fly-left{
 	animation: fly-left 0.5s forwards; 
-	-webkit-animation:fly-left 0.5s forwards;
 }
 
 
-
-@-webkit-keyframes slide {
-    100% { top: 0px; }
-}
 
 @keyframes slide{
 	100% { top: 0px;}
-}
-
-@-webkit-keyframes grows {
-    100% { transform: scale(1.1)}
 }
 
 @keyframes grows{
@@ -144,18 +143,16 @@ body{width: 50%;}
 	100% { transform: translate(150vw,0vw);}
 }
 
-@-webkit-keyframes fly-right {
-    100% { transform: translate(150vw,0vw); }
-}
-
 @keyframes fly-left {
 	100% { transform: translate(-150vw,0vw);}
 }
 
-@-webkit-keyframes fly-left {
-    100% { transform: translate(-150vw,0vw); }
+*{
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
-
 
 .random-text{
 	position: absolute;
@@ -168,10 +165,6 @@ body{width: 50%;}
 	margin: 0px;
 	z-index: -1;
 	font-family: Roboto-Light;
-	-webkit-user-select: none; /* Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+/Edge */
-	user-select: none; /* Standard */
 }
 
 .random-text-left{
@@ -184,4 +177,20 @@ body{width: 50%;}
 	right: 0px;
 	text-align: right;
 	width: 30%;
+}
+
+.display-none{
+    display: none !important;
+}
+
+#chat-with-me-container{
+	left: 0;
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
