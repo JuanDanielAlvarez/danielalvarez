@@ -1,4 +1,4 @@
-@import "styles.css";
+@import "./styles.css";
 
 
 #chat-container, #chat-options{
@@ -23,7 +23,7 @@
   text-decoration: none;
 }
 .chat-questions p{
-  font: 24px Roboto;
+  font: 24px 'Roboto-Medium';
   padding: 0;
   margin: 0;
 }
@@ -42,6 +42,36 @@
     margin: 0;
 }
 
+.email-form{
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  font: 24px 'Roboto-Medium';
+  width: fit-content;
+}
+.email-form > div{
+  min-width: 40vw;
+  padding: 25px;
+  margin-right: 0;
+  align-self: flex-end;
+}
+
+.email-form > div > input, .email-form > div > textarea {
+  width: 95%;
+  min-width: 95%;
+  max-width: 95%;
+  font: 24px 'Roboto-Medium';
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.email-form-button {
+  font: 24px 'Roboto-Medium';
+  width: 20vw;
+}
+
+
+
 .chat-questions:hover{
   transform: scale(1.3);
 }
@@ -58,7 +88,7 @@
   text-decoration: none;
 }
 .chat-right p{
-  font: 24px Roboto;
+  font: 24px 'Roboto-Medium';
   padding: 0;
   margin: 0;
 }
@@ -80,6 +110,7 @@
 .chat-left{
   background: var(--color-white);
   color: var(--color-dark-blue);
+  min-height: 30px;
   border-radius: 3px;
   max-width: 60%;
   padding: 10px;
@@ -89,7 +120,7 @@
   text-decoration: none;
 }
 .chat-left p{
-  font: 24px Roboto;
+  font: 24px 'Roboto-Medium';
   padding: 0;
   margin: 0;
 }
@@ -114,6 +145,11 @@
     position: absolute;
     left: -100px;
     top: -20px;
+}
+
+.chat-image{
+  width: 100%;
+  height: auto;
 }
 
 .animate-talk{

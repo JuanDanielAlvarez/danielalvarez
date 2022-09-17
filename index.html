@@ -5,25 +5,33 @@
 		<title>Daniel Alvarez | My Personal Portfolio</title>
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/chat-styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://kit.fontawesome.com/c874d33fb8.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<include src="./common/header.html"></include>
+		<header id="header">
+			<a href="."><span>Daniel Álvarez</span> | web developer</a>
+		</header>
 		<div id="content" class="content">
 			<h1 id="index-title" class="animation-typewritter"> Hi, I am Daniel, <br>full stack web developer</h1>
 			<h2 id="index-subtitle">How can I help you?</h2>
 			<div id="btn-box-call-to-action">
-				<button id="cta-button-hire-me" class="cta-main-button">Hire Me</button>
-				<button id="chat-button-chat-with-me" class="cta-secondary-button">Chat With Me</button>
+				<button id="cta-button-hire-me" class="cta-main-button animation-typewritter">Hire Me</button>
+				<button id="chat-button-chat-with-me" class="cta-secondary-button animation-typewritter">Chat With Me</button>
 			</div>
 		</div>
 		<p class="random-text random-text-right"></p>
 		<p class="random-text random-text-left"></p>
-		<div id ="chat-with-me-container" class="display-none">
-			<include src="chat.html"></include>
+		<div id ="chat-with-me-container" class="display-none" >
+			<div>
+				<div id="chat-container"></div>
+				<div id="chat-options"></div>
+			</div>
 		</div>
 	</body>
 </html>
 
+<script type="text/javascript" src="data/questions.json"></script>
 <script src="js/chat.js"></script>
 <script src="js/include_html_in_html.js"></script>
 <script src="js/random_text_generator.js"></script>
