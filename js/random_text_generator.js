@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const createRandomString = () => {
     randomString = ""
-    for(var i = 0; i<3; i++){
+    for(var i = 0; i<6; i++){
       randomString += words[Math.floor(Math.random() * words.length)] + " "
     }
     elements = document.getElementsByClassName("random-text")

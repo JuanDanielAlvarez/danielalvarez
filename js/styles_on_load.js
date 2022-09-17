@@ -30,4 +30,5 @@ function openChat() {
 		.getElementById("chat-with-me-container")
 		.classList.remove("display-none");
 	showOptions();
+	startTypeWritter()
 }
